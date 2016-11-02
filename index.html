@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" language="javascript" src="script.js"></script>
+<script type="text/javascript" language="javascript" src="retrieve.json"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="backtotop.js"></script>
+<script type="text/javascript">
+        $(document).ready(function(){ 
+        $("#show").click(function(){ 
+        $(".output").show(); 
+        });
+        $("#hide").click(function(){ 
+        $(".output").hide(); 
+        })
+        $("#fade").click(function(){
+        $(".output").fadeIn('slow');
+        })
+        $("#toggle").click(function(){
+        $(".contact").toggle();
+        })
+});
+        </script>
+</head>
+<body>
+<div class="banner">
+<img src="carbanner.png">
+</div>
+<h1>Look up your car insurance renewal quote</h1>
+<div class="input">
+<form name="response" action="" method="get" enctype="text/plain" onsubmit="">
+<fieldset>
+<label for="reference">Reference:</label>
+<input type="text" name="reference" id="reference" value=""/><br/>
+</fieldset>
+</form>
+</div>
+<p><button id="getJSON" class="button-link">Retrieve</a></button></p>
+<h3>Click any of the buttons below to show, hide, fade or toggle your insurance quote!<h3>
+<button id="show">Show</button>
+<button id="hide">Hide</button>
+<button id="fade">Fade in</button>
+<div class="output" style="display : none;">
+<form name="response" action="" method="get" enctype="text/plain" onsubmit="">
+<fieldset>
+<label for="firstname">First name:</label>
+<input type="text" name="firstname" id="firstname" value=""/><br/>
+<label for="lastname">Last name:</label>
+<input type="text" name="lastname" id="lastname" value=""/><br/>
+<label for="carmake">Car make:</label>
+<input type="text" name="carmake" id="carmake" value=""/><br/>
+<label for="carmodel">Car model:</label>
+<input type="text" name="carmodel" id="carmodel" value=""/><br/>
+<label for="year">Year:</label>
+<input type="text" name="year" id="year" value=""/><br/>
+<label for="miles">Miles:</label>
+<input type="text" name="miles" id="miles" value=""/><br/>
+<label for="registration">Registration:</label>
+<input type="text" name="registration" id="registration" value=""/><br/>
+<label for="annualprice">Annual price: &#8356</label>
+<input type="text" name="annualprice" id="annualprice" value=""/><br/>
+<label for="monthlyprice">Monthly price: &#8356</label>
+<input type="text" name="monthlyprice" id="monthlyprice" value=""/><br/>
+</fieldset>
+</form>
+</div>
+<hr>
+<h3>Click the Toggle button to see our contact us section!</h3>
+<button id="toggle">Toggle</button>
+<div class="contact" style="display: none;">
+<form id="contact">
+<p><label for="email">Email address:</label>
+<input type="text" id="email" size="30" value="carinsurance@email.com"></p>
+<p><label for="number">Phone number:</label>
+<input type="text" id="number" value="080011133444"></p>
+<p><label for="email">Facebook</label>
+<input type="text" id="email" size="30" value="www.facebook.com/carinsurance"></p>
+<p><label for="number">Twitter</label>
+<input type="text" id="number" size="30" value="www.twitter.com/carinsurance"></p>
+</form>
+</div>
+</body>
+<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+</html>
