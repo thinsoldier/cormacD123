@@ -4,7 +4,7 @@
             $("#getJSON").click(function(){
                 var parameter_reference = $('#reference').val();
                 
-                url = url + "?reference=" + parameter_ref;
+                url = url + "?reference=" + parameter_reference;
                 
                 $.getJSON(url,function(json){
                     $("#msg").empty();
