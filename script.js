@@ -1,10 +1,8 @@
 
   $(document).ready(function(){ 
-            var url = "json_data.php";
             $("#getJSON").click(function(){
-                var parameter_reference = $('#reference').val();
-                
-                url = url + "?reference=" + parameter_reference;
+                var url = "json_data.php";
+                url = url + "?reference=" + $('#reference').val();
                 
                 $.getJSON(url,function(json){
                     $("#msg").empty();
